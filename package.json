@@ -1,0 +1,24 @@
+{
+  "name": "javascriptcapstonemodule2",
+  "version": "1.0.0",
+  "description": "Building a Website using API, WebPack to retrieve books, comment and rating them.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NelsonAraujo93/JavaScriptCapstoneModule2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NelsonAraujo93/JavaScriptCapstoneModule2/issues"
+  },
+  "homepage": "https://github.com/NelsonAraujo93/JavaScriptCapstoneModule2#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
