@@ -2,3 +2,172 @@ body {
   background-color: #061144;
   font-family: "Poppins", cursive;
 }
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid gray;
+}
+
+.header-img {
+  width: 100px;
+  height: 100px;
+
+  /* background: url("google_books.png") no-repeat; */
+  border-radius: 50%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 25px;
+  max-width: 1084px;
+  margin: 2% auto;
+}
+
+.bookCard {
+  width: 350px;
+  height: 480px;
+  background-color: #828bdb;
+  margin: 2%;
+  color: #fff;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.3) -2px 4px 0;
+  color: white;
+  letter-spacing: normal;
+  letter-spacing: 6px;
+  font-family: "Unbounded", cursive;
+}
+
+.text-center {
+  text-align: center;
+}
+
+p {
+  letter-spacing: 0;
+  font-size: 400;
+  color: #242a33;
+}
+
+.book-cover {
+  width: 200px;
+  height: 250px;
+  box-shadow:
+    rgba(70, 70, 90, 0.25) 0 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+  border-radius: 20px;
+}
+
+.para {
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+input {
+  font-size: 1.5rem;
+  border: 3px solid dodgerblue;
+  box-shadow:
+    rgba(70, 70, 90, 0.25) 0 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+  border-radius: 20px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.search,
+.heart {
+  background-color: #ff1ebb;
+  color: white;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+  border-radius: 1rem;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.total-books {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+
+  /*    border-bottom: 2px solid white; */
+}
+
+.total-books:hover {
+  color: #ff1ebb;
+  font-size: 34px;
+  transition: 1s ease-in-out;
+}
+
+.title {
+  background-color: #ff1ebb;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 6px;
+  padding: 7px;
+  margin-top: 0;
+  height: 8vh;
+  border-radius: 24px 24px 0 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #2b2e4a;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.add-comment {
+  background-color: #061144;
+  color: white;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+  border-radius: 1rem;
+  padding: 10px;
+  font-size: 20px;
+  transition: 1s ease-in-out;
+}
+
+.add-comment:hover {
+  background-color: #ff1ebb;
+}
+
+.heart:hover,
+.search:hover {
+  background-color: #061144;
+}
+
+.likes,
+.likes-counter {
+  font-size: 20px;
+  font-weight: bold;
+}
