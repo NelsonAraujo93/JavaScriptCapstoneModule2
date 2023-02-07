@@ -4,8 +4,6 @@ import Logo from './images/google_books.png';
 const bookList = document.getElementById('book-list');
 
 const bookDetails = async () => {
-  let content = '';
-
   const options = ['html', 'css', 'javascript', 'ruby', 'react', 'node', 'jokes', 'java', 'maths', 'art', 'spanish', 'english', 'python', 'sql'];
 
   const num = Math.floor(Math.random() * 13);
@@ -63,6 +61,9 @@ const retrieveBooks = () => {
   bookDetails();
 };
 
+const searchInputBtn = document.getElementById('btn-search');
+searchInputBtn.addEventListener('click', retrieveBooks);
+
 function loadLogo() {
   const googleLogo = document.querySelector('.header-img');
   googleLogo.src = Logo;
@@ -75,5 +76,3 @@ window.onload = () => {
 };
 
 document.addEventListener('DOMContentLoaded', retrieveBooks);
-
-bookDetails();
