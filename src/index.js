@@ -1,5 +1,6 @@
 import './style.css';
 import Logo from './images/google_books.png';
+// import booksTotal from './modules/booksTotal.js';
 
 const bookList = document.getElementById('book-list');
 
@@ -16,8 +17,8 @@ const bookDetails = async () => {
 
   const { totalItems } = data;
 
-  // const totalBooks = document.querySelector('.total-books');
-  // totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
+  const totalBooks = document.querySelector('.total-books');
+  totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
 
   for (let i = 0; i < totalItems; i += 1) {
     const bookList = document.getElementById('book-list');
