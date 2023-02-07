@@ -4,7 +4,6 @@ import Logo from './images/google_books.png';
 const bookList = document.getElementById('book-list');
 
 const popUp = (item) => {
-  debugger;
   const popUpContainer = document.createElement('article');
   popUpContainer.id = 'pop-up';
 
@@ -55,18 +54,19 @@ const popUp = (item) => {
 
   const addComentBtn = document.getElementById('comment-btn');
   addComentBtn.addEventListener('click', () => {
-    const userInput = document.getElementById('user').value;
-    const textAreaInput = document.getElementById('comment').value;
-
-    debugger;
+    /*
+      const userInput = document.getElementById('user').value;
+      const textAreaInput = document.getElementById('comment').value;
+    */
   });
-}
+};
 
-const getBookData = async (bookId) => {
+/*
+  const getBookData = async (bookId) => {
 
-}
+  }
 
-const createComment = async (bookId, user, comment) => {
+  const createComment = async (bookId, user, comment) => {
   fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/gcxOnR7Ou6sAxWdfnAQw/comments', {
     method: 'POST',
     body: JSON.stringify({
@@ -78,7 +78,8 @@ const createComment = async (bookId, user, comment) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-}
+  }
+*/
 
 const bookDetails = async () => {
   const options = ['html', 'css', 'javascript', 'ruby', 'react', 'node', 'jokes', 'java', 'maths', 'art', 'spanish', 'english', 'python', 'sql'];
@@ -91,7 +92,7 @@ const bookDetails = async () => {
   const res = await fetch(url);
   const data = await res.json();
 
-  const { totalItems } = data;
+  // const { totalItems } = data;
 
   // const totalBooks = document.querySelector('.total-books');
   // totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
@@ -127,8 +128,10 @@ const bookDetails = async () => {
     contentCard.innerHTML = bookCardContent;
     bookCard.appendChild(contentCard);
     bookList.appendChild(bookCard);
-    const commentBtn = document.getElementById('comment-btn-'+data.items[i].id);
-    commentBtn.addEventListener('click', () =>{ popUp(data.items[i])});
+    const commentBtn = document.getElementById(`comment-btn-${data.items[i].id}`);
+    commentBtn.addEventListener('click', () => {
+      popUp(data.items[i]);
+    });
   }
 };
 
