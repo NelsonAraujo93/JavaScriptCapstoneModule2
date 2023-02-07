@@ -15,8 +15,9 @@ const bookDetails = async () => {
   const data = await res.json();
 
   const { totalItems } = data;
-  const totalBooks = document.querySelector('.total-books');
-  totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
+
+  // const totalBooks = document.querySelector('.total-books');
+  // totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
 
   for (let i = 0; i < totalItems; i += 1) {
     const bookList = document.getElementById('book-list');
