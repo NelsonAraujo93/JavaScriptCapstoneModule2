@@ -3,10 +3,35 @@ import Logo from './images/google_books.png';
 
 const bookList = document.getElementById('book-list');
 
-const popUp = (item) => {
+const createComment = async (bookId, user, comment) => {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/gcxOnR7Ou6sAxWdfnAQw/comments', {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: bookId,
+      username: user,
+      comment,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  const jsonResponse = await response.json();
+  return jsonResponse;
+};
+
+const getBookData = async (bookId) => {
+  const res = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/gcxOnR7Ou6sAxWdfnAQw/comments?item_id=${bookId}`);
+  const data = await res.json();
+  if (!data.error) {
+    return data;
+  }
+  return [];
+};
+
+const popUp = async (item) => {
+  item.comments = await (getBookData(item.id));
   const popUpContainer = document.createElement('article');
   popUpContainer.id = 'pop-up';
-
   popUpContainer.innerHTML = `
     <div class="pop-container">
       <div class="pop-up-header">
@@ -33,7 +58,7 @@ const popUp = (item) => {
         </div>
       </div>
       <div class="pop-up-comments">
-        <h3>Comments (2)</h3>
+        <h3>Comments (${item.comments.length})</h3>
         <ul id="comments-list"></ul>
       </div>
       <div class="pop-up-form">
@@ -53,33 +78,24 @@ const popUp = (item) => {
   });
 
   const addComentBtn = document.getElementById('comment-btn');
-  addComentBtn.addEventListener('click', () => {
-    /*
-      const userInput = document.getElementById('user').value;
-      const textAreaInput = document.getElementById('comment').value;
-    */
+  addComentBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const userInput = document.getElementById('user').value;
+    const textAreaInput = document.getElementById('comment').value;
+    createComment(item.id, userInput, textAreaInput);
   });
+
+  const commentList = document.getElementById('comments-list');
+  if (item.comments.length > 0) {
+    item.comments.map((item) => {
+      const itemList = document.createElement('li');
+      itemList.innerHTML = `
+        <div>${item.comment}</div>
+      `;
+      return commentList.append(itemList);
+    });
+  }
 };
-
-/*
-  const getBookData = async (bookId) => {
-
-  }
-
-  const createComment = async (bookId, user, comment) => {
-  fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/gcxOnR7Ou6sAxWdfnAQw/comments', {
-    method: 'POST',
-    body: JSON.stringify({
-      item_id: bookId,
-      username: user,
-      comment: comment,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  });
-  }
-*/
 
 const bookDetails = async () => {
   const options = ['html', 'css', 'javascript', 'ruby', 'react', 'node', 'jokes', 'java', 'maths', 'art', 'spanish', 'english', 'python', 'sql'];

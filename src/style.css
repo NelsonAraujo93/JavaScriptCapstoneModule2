@@ -290,3 +290,7 @@ textarea:focus {
   border-color: dodgerblue;
   box-shadow: 0 0 8px 0 dodgerblue;
 }
+
+#comments-list {
+  flex-direction: column;
+}
