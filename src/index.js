@@ -105,8 +105,7 @@ const getTotal = async () => {
 
 const bookDetails = async () => {
   const { data, totalItems, search } = await getTotal();
-  debugger;
-  
+
   const totalBooks = document.querySelector('.total-books');
 
   totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
