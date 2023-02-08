@@ -3,7 +3,7 @@ import Logo from './images/google_books.png';
 import totalBooksItems from './modules/totalItems.js';
 import { getBookData, createComment } from './modules/totalComments.js';
 
-import { getAllLikes } from './modules/getLikes.js';
+import { getAllLikes, createLike } from './modules/getLikes.js';
 
 let likesData = [];
 
@@ -107,7 +107,7 @@ const bookDetails = async () => {
             </p>
             <button type="submit" class="add-comment" id="comment-btn-${data.items[i].id}">Comment</button>
             &#160;&#160;&#160;&#160;
-            <button class="heart">
+            <button class="heart" id="heart-${data.items[i].id}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-heart-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                 </svg>
             </button>
@@ -126,6 +126,11 @@ const bookDetails = async () => {
     const commentBtn = document.getElementById(`comment-btn-${data.items[i].id}`);
     commentBtn.addEventListener('click', () => {
       popUp(data.items[i]);
+    });
+
+    const heartBtn = document.getElementById(`heart-${data.items[i].id}`);
+    heartBtn.addEventListener('click', () => {
+      createLike(data.items[i].id);
     });
   }
 };
