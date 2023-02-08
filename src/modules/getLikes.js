@@ -21,7 +21,7 @@ const createLike = async (itemId) => {
     },
   });
   if (response.ok) {
-    return window.location.reload();
+    window.location.reload();
   }
 };
 
