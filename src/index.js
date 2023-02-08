@@ -3,6 +3,8 @@ import Logo from './images/google_books.png';
 import totalBooksItems from './modules/totalItems.js';
 import { getBookData, createComment } from './modules/totalComments.js';
 
+import { getItemLikes } from './modules/getLikes.js';
+
 const bookList = document.getElementById('book-list');
 
 const popUp = async (item) => {
@@ -87,6 +89,9 @@ const bookDetails = async () => {
   totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
 
   for (let i = 0; i < data.items.length; i += 1) {
+    const likes = getItemLikes(data.items[i].id);
+    debugger;
+    
     const bookList = document.getElementById('book-list');
     const bookCard = document.createElement('div');
     const contentCard = document.createElement('p');
@@ -106,7 +111,7 @@ const bookDetails = async () => {
                 </svg>
             </button>
             &#160;&#160;&#160;&#160;
-            <span class="likes-counter">0</span>
+            <span class="likes-counter">${likes}</span>
             &#160;&#160;&#160;
             <span class="likes">likes</span>`;
     const title1 = `${data.items[i].volumeInfo.title}`;
