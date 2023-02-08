@@ -16,8 +16,6 @@ nav {
 .header-img {
   width: 100px;
   height: 100px;
-
-  /* background: url("google_books.png") no-repeat; */
   border-radius: 50%;
 }
 
@@ -25,6 +23,8 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
+  padding-left: 0;
 }
 
 .box {
@@ -118,8 +118,6 @@ input[type="text"]:focus {
   color: white;
   font-size: 24px;
   font-weight: 700;
-
-  /*    border-bottom: 2px solid white; */
 }
 
 .total-books:hover {
@@ -314,4 +312,9 @@ footer p {
 footer a {
   text-decoration: none;
   color: gray;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 700;
 }
