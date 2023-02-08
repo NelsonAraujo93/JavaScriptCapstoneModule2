@@ -3,7 +3,9 @@ import Logo from './images/google_books.png';
 import totalBooksItems from './modules/totalItems.js';
 import { getBookData, createComment } from './modules/totalComments.js';
 
-import { getItemLikes } from './modules/getLikes.js';
+import { getAllLikes } from './modules/getLikes.js';
+
+let likesData = [];
 
 const bookList = document.getElementById('book-list');
 
@@ -89,7 +91,7 @@ const bookDetails = async () => {
   totalBooks.innerHTML = `(${totalItems}) Books about ${search}`;
 
   for (let i = 0; i < data.items.length; i += 1) {
-    const likes = getItemLikes(data.items[i].id);
+    const likes = likesData.filter((item) => item.item_id === data.items[i].id);
 
     const bookList = document.getElementById('book-list');
     const bookCard = document.createElement('div');
@@ -110,7 +112,7 @@ const bookDetails = async () => {
                 </svg>
             </button>
             &#160;&#160;&#160;&#160;
-            <span class="likes-counter">${likes}</span>
+            <span class="likes-counter">${likes.length === 0 ? 0 : likes[0].likes}</span>
             &#160;&#160;&#160;
             <span class="likes">likes</span>`;
     const title1 = `${data.items[i].volumeInfo.title}`;
@@ -142,9 +144,8 @@ function loadLogo() {
   googleLogo.alt = 'google books Logo';
 }
 
-window.onload = () => {
+window.onload = async () => {
+  likesData = await getAllLikes();
   loadLogo();
-  // loadGithubIcon();
+  retrieveBooks();
 };
-
-document.addEventListener('DOMContentLoaded', retrieveBooks);
