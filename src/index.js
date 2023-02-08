@@ -86,12 +86,11 @@ const bookDetails = async () => {
 
   const totalBooks = document.querySelector('.total-books');
 
-  totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
+  totalBooks.innerHTML = `(${totalItems}) Books about ${search}`;
 
   for (let i = 0; i < data.items.length; i += 1) {
     const likes = getItemLikes(data.items[i].id);
-    debugger;
-    
+
     const bookList = document.getElementById('book-list');
     const bookCard = document.createElement('div');
     const contentCard = document.createElement('p');
