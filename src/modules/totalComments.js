@@ -24,6 +24,6 @@ const getBookData = async (bookId) => {
 };
 
 export {
-  createComment, 
-  getBookData
+  createComment,
+  getBookData,
 };

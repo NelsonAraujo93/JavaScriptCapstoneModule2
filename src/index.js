@@ -1,7 +1,7 @@
 import './style.css';
 import Logo from './images/google_books.png';
 import totalBooksItems from './modules/totalItems.js';
-import {getBookData, createComment} from './modules/totalComments';
+import { getBookData, createComment } from './modules/totalComments.js';
 
 const bookList = document.getElementById('book-list');
 
