@@ -20,9 +20,9 @@ const createLike = async (itemId) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  const hearts = await response.json();
-  window.location.reload();
-  return hearts;
+  if (response.ok) {
+    return window.location.reload();
+  }
 };
 
 export {
