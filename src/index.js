@@ -46,7 +46,7 @@ const popUp = async (item) => {
         <h3>Add a comment</h3>
         <form id="new-comment">
           <input id="user" type="text" name="user" placeholder="Your name" required></input>
-          <textarea id="comment" name="user" placeholder="Your name" required></textarea>
+          <textarea id="comment" name="user" placeholder="Add your comment" required></textarea>
           <button class="add-comment" id="comment-btn">Comment</button>
         </form>
       </div>
@@ -64,6 +64,7 @@ const popUp = async (item) => {
     const userInput = document.getElementById('user').value;
     const textAreaInput = document.getElementById('comment').value;
     createComment(item.id, userInput, textAreaInput);
+    popUpContainer.remove();
   });
 
   const commentList = document.getElementById('comments-list');
@@ -71,7 +72,11 @@ const popUp = async (item) => {
     item.comments.map((item) => {
       const itemList = document.createElement('li');
       itemList.innerHTML = `
-        <div>${item.comment}</div>
+        <div>
+          <span>${item.creation_date} </span>
+          <span class="user-name">${item.username}: </span>
+          <span>${item.comment}</span>
+        </div>
       `;
       return commentList.append(itemList);
     });
