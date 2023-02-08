@@ -109,11 +109,11 @@ const bookDetails = async () => {
   const res = await fetch(url);
   const data = await res.json();
 
-  // const { totalItems } = data;
+  const { totalItems } = data;
 
   const totalBooks = document.querySelector('.total-books');
   totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
-
+  debugger;
   for (let i = 0; i < data.items.length; i += 1) {
     const bookList = document.getElementById('book-list');
     const bookCard = document.createElement('div');
@@ -123,7 +123,7 @@ const bookDetails = async () => {
     const bookCardContent = `
             <p>
                 <a  href='${data.items[i].volumeInfo.previewLink}'>
-                    <img src='${data.items[i].volumeInfo.imageLinks.thumbnail}' class="book-cover">
+                    <img src='${data.items[i].volumeInfo.imageLinks.thumbnail?data.items[i].volumeInfo.imageLinks.thumbnail:''}' class="book-cover">
                     <br>More details
                 </a>
             </p>
