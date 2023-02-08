@@ -1,5 +1,6 @@
 import './style.css';
 import Logo from './images/google_books.png';
+import totalBooksItems from './modules/totalItems.js';
 
 const bookList = document.getElementById('book-list');
 
@@ -97,21 +98,18 @@ const popUp = async (item) => {
   }
 };
 
+const getTotal = async () => {
+  const { data, totalItems, search } = await totalBooksItems();
+  return { data, totalItems, search };
+};
+
 const bookDetails = async () => {
-  const options = ['html', 'css', 'javascript', 'ruby', 'react', 'node', 'jokes', 'java', 'maths', 'art', 'spanish', 'english', 'python', 'sql'];
+  const { data, totalItems, search } = await getTotal();
+  debugger;
+  
+  const totalBooks = document.querySelector('.total-books');
 
-  const num = Math.floor(Math.random() * 13);
-
-  const search = document.getElementById('search').value || options[num];
-  const url = `https://www.googleapis.com/books/v1/volumes?q=${search}`;
-
-  const res = await fetch(url);
-  const data = await res.json();
-
-  // const { totalItems } = data;
-
-  // const totalBooks = document.querySelector('.total-books');
-  // totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
+  totalBooks.innerHTML = `"${totalItems}" Books about ${search}`;
 
   for (let i = 0; i < data.items.length; i += 1) {
     const bookList = document.getElementById('book-list');
