@@ -1,11 +1,11 @@
-# LeaderBoard
+# JavaScript Capstone Project (Module 2)
 <a name="readme-top"></a>
 <div align="center">
 
   <img src="https://vagosstudios.com/assets/images/logo-navbar.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Leader Board Webpack-Api</b></h3>
+  <h3><b>JavaScript Capstone Project (Module 2)</b></h3>
 
 </div>
 
@@ -33,9 +33,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Leader board webpack] <a name="about-project"></a>
+# 📖 [JavaScript Capstone Project (Module 2)] <a name="about-project"></a>
 
-**[Leader board]** This project is a Webpack project build with JS, CSS and HTML to test our learnings in webpack websites building and api consume.
+**[JavaScript Capstone Project (Module 2)]** The JavaScript capstone project is about building our own web application based on an external API. We select GoogleBooks API which is an API that provides data about different books that one can like and add comments and then build the webapp around it. The webapp will have 2  interfaces (One for the home page and the other for showing and adding comments):
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -68,7 +68,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://nelsonaraujo93.github.io/LeaderBoard/dist)
+- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,7 +87,7 @@ In order to run this project you need:
 
 ### Setup
 
-In order to run this project you need: clone this repo [https://github.com/NelsonAraujo93/LeaderBoard]
+In order to run this project you need: clone this repo []
 
 
 ### Install
@@ -111,6 +111,7 @@ Once the project is installed you only need to open the index.html file on your 
 - GitHub: [@NelsonAraujo93](https://github.com/NelsonAraujo93)
 
 👤 **Mohamed Gamil Eldimardash**
+
 - GitHub: [@github](https://github.com/MMGGYY66)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-eldimardash-0023a3b5/)
 - Twitter: [twitter](https://twitter.com/MOHAMEDELDIMARd)
