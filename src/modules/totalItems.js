@@ -5,8 +5,8 @@ const totalBooksItems = async () => {
   const url = `https://www.googleapis.com/books/v1/volumes?q=${search}`;
   const res = await fetch(url);
   const data = await res.json();
-  const { totalItems } = data;
-  return { data, totalItems, search };
+  const { items } = data;
+  return { data, items, search };
 };
 
 export default totalBooksItems;

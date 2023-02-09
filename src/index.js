@@ -84,16 +84,16 @@ const popUp = async (item) => {
 };
 
 const getTotal = async () => {
-  const { data, totalItems, search } = await totalBooksItems();
-  return { data, totalItems, search };
+  const { data, items, search } = await totalBooksItems();
+  return { data, items, search };
 };
 
 const bookDetails = async () => {
-  const { data, totalItems, search } = await getTotal();
+  const { data, items, search } = await getTotal();
 
   const totalBooks = document.querySelector('.total-books');
 
-  totalBooks.innerHTML = `(${totalItems}) Books about ${search}`;
+  totalBooks.innerHTML = `(${items.length}) Books about ${search}`;
 
   for (let i = 0; i < data.items.length; i += 1) {
     const likes = likesData.filter((item) => item.item_id === data.items[i].id);

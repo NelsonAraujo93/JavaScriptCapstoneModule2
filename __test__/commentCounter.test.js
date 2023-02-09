@@ -1,4 +1,4 @@
-import Comments from './utils/comments.js';
+import Comments from '../utils/comments.js';
 
 describe('Comments', () => {
   const comments = new Comments();
