@@ -110,6 +110,12 @@ Once the project is installed you only need to open the index.html file on your 
 
 - GitHub: [@NelsonAraujo93](https://github.com/NelsonAraujo93)
 
+👤 **Mohamed Gamil Eldimardash**
+- GitHub: [@github](https://github.com/MMGGYY66)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-eldimardash-0023a3b5/)
+- Twitter: [twitter](https://twitter.com/MOHAMEDELDIMARd)
+- Facebook: [facebook](https://www.facebook.com/MOHAMED.ELDIMARDASH/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
