@@ -4,7 +4,7 @@
   "description": "Building a Website using API, WebPack to retrieve books, comment and rating them.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack",
     "start": "webpack serve --open",
     "dev": "webpack --mode development",
@@ -20,6 +20,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NelsonAraujo93/JavaScriptCapstoneModule2/issues"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "homepage": "https://github.com/NelsonAraujo93/JavaScriptCapstoneModule2#readme",
   "devDependencies": {
