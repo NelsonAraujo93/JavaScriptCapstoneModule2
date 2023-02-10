@@ -134,7 +134,8 @@ const bookDetails = async () => {
     });
 
     const heartBtn = document.getElementById(`heart-${data.items[i].id}`);
-    heartBtn.addEventListener('click', () => {
+    heartBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       createLike(data.items[i].id);
     });
   }
@@ -154,7 +155,8 @@ const loadLogo = () => {
   googleLogo.alt = 'google books Logo';
 };
 
-window.onload = async () => {
+window.onload = async (e) => {
+  e.preventDefault();
   likesData = await getAllLikes();
   loadLogo();
   retrieveBooks();
