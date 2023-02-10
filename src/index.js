@@ -88,6 +88,11 @@ const getTotal = async () => {
   return { data, items, search };
 };
 
+const createAndLoadLikes = async (id) => {
+  await createLike(id);
+  likesData = await getAllLikes();
+};
+
 const bookDetails = async () => {
   const { data, items, search } = await getTotal();
 
@@ -103,10 +108,11 @@ const bookDetails = async () => {
     const contentCard = document.createElement('p');
 
     const title = document.createElement('h4');
+    if (likes.length === 0) likes.push({ likes: 0 });
     const bookCardContent = `
             <p>
                 <a  href='${data.items[i].volumeInfo.previewLink}'>
-                    <img src='${data.items[i].volumeInfo.imageLinks.thumbnail}' class="book-cover">
+                    <img src='${data.items[i].volumeInfo.imageLinks ? data.items[i].volumeInfo.imageLinks.thumbnail : ''}' class="book-cover">
                     <br>More details
                 </a>
             </p>
@@ -117,7 +123,7 @@ const bookDetails = async () => {
                 </svg>
             </button>
             &#160;&#160;&#160;&#160;
-            <span class="likes-counter">${likes.length === 0 ? 0 : likes[0].likes}</span>
+            <span id="likes-${data.items[i].id}" class="likes-counter">${likes[0].likes}</span>
             &#160;&#160;&#160;
             <span class="likes">likes</span>`;
     const title1 = `${data.items[i].volumeInfo.title}`;
@@ -134,9 +140,11 @@ const bookDetails = async () => {
     });
 
     const heartBtn = document.getElementById(`heart-${data.items[i].id}`);
-    heartBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      createLike(data.items[i].id);
+    heartBtn.addEventListener('click', () => {
+      createAndLoadLikes(data.items[i].id);
+      const likesSpan = document.getElementById(`likes-${data.items[i].id}`);
+      likes[0].likes += 1;
+      likesSpan.innerHTML = likes[0].likes;
     });
   }
 };
