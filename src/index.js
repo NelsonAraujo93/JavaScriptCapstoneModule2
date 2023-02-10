@@ -148,11 +148,11 @@ const retrieveBooks = () => {
 const searchInputBtn = document.getElementById('btn-search');
 searchInputBtn.addEventListener('click', retrieveBooks);
 
-function loadLogo() {
+const loadLogo = () => {
   const googleLogo = document.querySelector('.header-img');
   googleLogo.src = Logo;
   googleLogo.alt = 'google books Logo';
-}
+};
 
 window.onload = async () => {
   likesData = await getAllLikes();
