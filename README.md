@@ -18,6 +18,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+     - [👁 Presentation](#-presentation-)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -72,6 +73,10 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://nelsonaraujo93.github.io/JavaScriptCapstoneModule2/)
+ 
+ ## - Description video link <a name="presentation"></a>
+   
+   [JavaScript Capstone Project Module 2](https://drive.google.com/file/d/1eH77grxb9fznYb1KocOmjBizvLIONUsk/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
