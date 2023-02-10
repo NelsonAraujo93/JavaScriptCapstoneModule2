@@ -1,11 +1,11 @@
-# LeaderBoard
+# JavaScript Capstone Project (Module 2)
 <a name="readme-top"></a>
 <div align="center">
 
-  <img src="https://vagosstudios.com/assets/images/logo-navbar.png" alt="logo" width="140"  height="auto" />
+  <img src="./src/images/google_books.png" alt="logo" width="200"  height="auto" />
   <br/>
 
-  <h3><b>Leader Board Webpack-Api</b></h3>
+  <h3><b>JavaScript Capstone Project (Module 2)</b></h3>
 
 </div>
 
@@ -18,6 +18,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+     - [👁 Presentation](#-presentation-)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -33,9 +34,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Leader board webpack] <a name="about-project"></a>
+# 📖 [JavaScript Capstone Project (Module 2)] <a name="about-project"></a>
 
-**[Leader board]** This project is a Webpack project build with JS, CSS and HTML to test our learnings in webpack websites building and api consume.
+**[JavaScript Capstone Project (Module 2)]** The JavaScript capstone project is about building our own web application based on an external API. We select GoogleBooks API which is an API that provides data about different books that one can like and add comments and then build the webapp around it. The webapp will have 2  interfaces (One for the home page and the other for showing and adding comments). Also the users can search for an specific book or category and this is one extra feature we add to the project. We also used google books icon to our website.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -51,6 +52,7 @@
     <li>GitFlow</li>
     <li>ES6</li>
     <li>Webpack</li>
+    <li>Jest</li>
   </ul>
 </details>
 
@@ -61,6 +63,8 @@
 - **[Git flow]**
 - **[Good HTML, JS and CSS practices]**
 - **[ES6, modules]**
+- **[Jest, tests]**
+- **[Webpack]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,7 +72,11 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://nelsonaraujo93.github.io/LeaderBoard/dist)
+- [Live Demo Link](https://nelsonaraujo93.github.io/JavaScriptCapstoneModule2/)
+ 
+ ## - Description video link <a name="presentation"></a>
+   
+   [JavaScript Capstone Project Module 2](https://drive.google.com/file/d/1eH77grxb9fznYb1KocOmjBizvLIONUsk/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,7 +95,7 @@ In order to run this project you need:
 
 ### Setup
 
-In order to run this project you need: clone this repo [https://github.com/NelsonAraujo93/LeaderBoard]
+In order to run this project you need: clone this repo [https://github.com/NelsonAraujo93/JavaScriptCapstoneModule2.git]
 
 
 ### Install
@@ -98,7 +106,7 @@ After cloning the repo you need to install de dependencies.
 
 ### Usage
 
-Once the project is installed you only need to open the index.html file on your browser.
+Once the project is installed you only need to run the script (npm run build  ->  npm run start).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -110,13 +118,20 @@ Once the project is installed you only need to open the index.html file on your 
 
 - GitHub: [@NelsonAraujo93](https://github.com/NelsonAraujo93)
 
+👤 **Mohamed Gamil Eldimardash**
+
+- GitHub: [@github](https://github.com/MMGGYY66)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-eldimardash-0023a3b5/)
+- Twitter: [twitter](https://twitter.com/MOHAMEDELDIMARd)
+- Facebook: [facebook](https://www.facebook.com/MOHAMED.ELDIMARDASH/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Notifications]**
+- [ ] **[Paginator]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +141,7 @@ Once the project is installed you only need to open the index.html file on your 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/NelsonAraujo93/LeaderBoard/issues/2)
+Feel free to check the [issues page](https://github.com/NelsonAraujo93/JavaScriptCapstoneModule2/issues/36)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,7 +150,7 @@ Feel free to check the [issues page](https://github.com/NelsonAraujo93/LeaderBoa
 ## ⭐️ Show your support <a name="support"></a>
 
 
-If you like this project take the time to give feedback, I will appreciate it.
+If you like this project take the time to give feedback, we will appreciate it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +158,7 @@ If you like this project take the time to give feedback, I will appreciate it.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for giving me the chance to improve my coding.
+We would like to thank Microverse for giving me the chance to improve my coding.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,11 +168,11 @@ I would like to thank Microverse for giving me the chance to improve my coding.
 
 - **What is this for?**
 
-  - This is a ES6 activity to help us learn how to create a modular websites.
+  - This is a capstone project to practice working with kanba, API, webpack, ES6, Jest, Responsiveness and best practices.
 
 - **Can i copy this project?**
 
-  - Your welcome, copy this project and let me know if you need something.
+  - Your welcome, copy this project and let us know if you need something.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
