@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Welcome to our library</title>
+<script defer src="bundle.js"></script></head>
+<link rel="stylesheet" href="./src/style.css">
+
+<body onload="retrieveBooks()">
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">
+            <img src="" class="header-img" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="" class="total-books"></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 class="heading">Welcome to our library</h1>
+  <p class="para">Here you can find any book to read. Just search it here.</p>
+
+  <div class="text-center">
+    <input type="text" placeholder="Search a book" class="search-book" id="search" />
+    <button class="search" id="btn-search">Search</button>
+
+    <div id="book-list"></div>
+  </div>
+
+  <section>
+    <footer>
+      <p>&copy;Copyright @2023 developed by
+        <a href="https://github.com/MMGGYY66" target="_blank"><strong>Mohamed</strong></a> and <a
+          href="https://github.com/NelsonAraujo93" target="_blank"><strong>Nelson</strong></a>
+      </p>
+    </footer>
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
